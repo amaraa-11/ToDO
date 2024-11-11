@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .todo-container {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 400px;
+        height: 900px;
+        background-color: grey;
+        border-radius: 8px;
+      }
+      .todo-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .todo-item button {
+        background-color: rgb(117, 56, 56);
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .todo-list {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .dot {
+        height: 12px;
+        width: 12px;
+        border-radius: 50px;
+        color: #00a300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo-container">
+      <h1 class="dot"></h1>
+      <h2 class="todo-list">To-Do List</h2>
+      <input type="text" id="taskInput" />
+      <button onclick="addTask()">Нэмэх</button>
+      <ul id="taskList"></ul>
+    </div>
+    <script src="todo.js"></script>
+  </body>
+</html>
