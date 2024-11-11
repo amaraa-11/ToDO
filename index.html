@@ -7,13 +7,14 @@
     <style>
       body {
         font-family: Arial, sans-serif;
+        color: #ffffff;
       }
       .todo-container {
         max-width: 400px;
         margin: 0 auto;
         width: 400px;
         height: 900px;
-        background-color: grey;
+        background-color: #333333;
         border-radius: 8px;
       }
       .todo-item {
@@ -30,22 +31,23 @@
       }
       .todo-list {
         font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        color: #ffffff;
+        padding-top: 0;
+        width: 80%;
       }
       .dot {
-        height: 12px;
         width: 12px;
+        height: 12px;
         border-radius: 50px;
-        color: #00a300;
+        background-color: #00a300;
+        margin-top: 50px;
       }
     </style>
   </head>
   <body>
     <div class="todo-container">
-      <h1 class="dot"></h1>
-      <h2 class="todo-list">To-Do List</h2>
+      <p class="dot"></p>
+      <h2 class="todo-list">To Do</h2>
       <input type="text" id="taskInput" />
       <button onclick="addTask()">Нэмэх</button>
       <ul id="taskList"></ul>

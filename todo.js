@@ -12,6 +12,8 @@ function addTask() {
     const taskText = document.createElement("span");
     taskText.innerText = taskInput.value;
     li.appendChild(taskText);
+    const checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
 
     // ustgah towch
     const deleteButton = document.createElement("button");
@@ -19,6 +21,7 @@ function addTask() {
     deleteButton.onclick = function () {
       taskList.removeChild(li);
     };
+    li.appendChild(checkBox);
     li.appendChild(deleteButton);
 
     taskList.appendChild(li);
