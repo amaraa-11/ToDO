@@ -1,32 +1,27 @@
-// task nemeh
-
 function addTask() {
   const taskInput = document.getElementById("taskInput");
-  const taskList = document.getElementById("taskList");
+  const taskText = taskInput.value.trim();
 
-  if (taskInput.value.trim() !== "") {
-    const li = document.createElement("li");
-    li.className = "todo-item";
-
-    // ajliin ner
-    const taskText = document.createElement("span");
-    taskText.innerText = taskInput.value;
-    li.appendChild(taskText);
-    const checkBox = document.createElement("input");
-    checkBox.type = "checkbox";
-
-    // ustgah towch
-    const deleteButton = document.createElement("button");
-    deleteButton.innerText = "Устгах";
-    deleteButton.onclick = function () {
-      taskList.removeChild(li);
-    };
-    li.appendChild(checkBox);
-    li.appendChild(deleteButton);
-
-    taskList.appendChild(li);
+  if (taskText !== "") {
+    addTaskToList("todoList", taskText);
     taskInput.value = "";
-  } else {
-    alert("Hello!");
   }
 }
+
+function addTaskToList(listId, taskText) {
+  const list = document.getElementById(listId);
+  const li = document.createElement("li");
+
+  li.innerHTML = <span>${taskText}</span>;
+
+  list.appendChild(li);
+}
+
+function moveTask(button, targetListId) {
+  const taskItem = button.closest("li");
+  const taskText = taskItem.querySelector("span").innerText;
+
+  taskItem.remove();
+  addTaskToList(targetListId, taskText);
+}
+function deleteButton() {}

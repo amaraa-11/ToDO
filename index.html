@@ -3,55 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>To-Do List</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        color: #ffffff;
-      }
-      .todo-container {
-        max-width: 400px;
-        margin: 0 auto;
-        width: 400px;
-        height: 900px;
-        background-color: #333333;
-        border-radius: 8px;
-      }
-      .todo-item {
-        display: flex;
-        justify-content: space-between;
-        padding: 5px 0;
-        border-bottom: 1px solid #ddd;
-      }
-      .todo-item button {
-        background-color: rgb(117, 56, 56);
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      .todo-list {
-        font-size: 18px;
-        color: #ffffff;
-        padding-top: 0;
-        width: 80%;
-      }
-      .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50px;
-        background-color: #00a300;
-        margin-top: 50px;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
-    <div class="todo-container">
-      <p class="dot"></p>
-      <h2 class="todo-list">To Do</h2>
-      <input type="text" id="taskInput" />
-      <button onclick="addTask()">Нэмэх</button>
-      <ul id="taskList"></ul>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <input type="text" id="taskInput" placeholder="Add a new task..." />
+      <button class="add-task" onclick="addTask()">Add Task</button>
+      <button class="deleteButton" onclick="deleteButton()">Delete</button>
+      <div>
+        <button class="move-button" onclick="moveTask( 'todoList')">
+          To Do
+        </button>
+        <button class="move-button" onclick="moveTask( 'inProgressList')">
+          In Progress
+        </button>
+        <button class="move-button" onclick="moveTask( 'doneList')">
+          Done
+        </button>
+        <button class="move-button" onclick="moveTask( 'blockedList')">
+          Blocked
+        </button>
+      </div>
+
+      <div class="task-board">
+        <div class="task-column">
+          <ul id="todoList" class="task-list">
+            <h2>To Do</h2>
+          </ul>
+        </div>
+        <div class="task-column">
+          <ul id="inProgressList" class="task-list">
+            <h2>In Progress</h2>
+          </ul>
+        </div>
+        <div class="task-column">
+          <ul id="doneList" class="task-list">
+            <h2>Done</h2>
+          </ul>
+        </div>
+        <div class="task-column">
+          <ul id="blockedList" class="task-list">
+            <h2>Blocked</h2>
+          </ul>
+        </div>
+      </div>
     </div>
-    <script src="todo.js"></script>
+
+    <script src="todo.jss"></script>
   </body>
 </html>
