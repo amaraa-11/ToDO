@@ -3,55 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
     <link rel="stylesheet" href="style.css" />
-    <title>To-Do List</title>
-    <style></style>
   </head>
   <body>
-    <div class="container">
-      <h1>To-Do List</h1>
-      <input type="text" id="taskInput" placeholder="Add a new task..." />
-      <button class="add-task" onclick="addTask()">Add Task</button>
-      <button class="deleteButton" onclick="deleteButton()">Delete</button>
-      <div>
-        <button class="move-button" onclick="moveTask( 'todoList')">
-          To Do
-        </button>
-        <button class="move-button" onclick="moveTask( 'inProgressList')">
-          In Progress
-        </button>
-        <button class="move-button" onclick="moveTask( 'doneList')">
-          Done
-        </button>
-        <button class="move-button" onclick="moveTask( 'blockedList')">
-          Blocked
-        </button>
+    <div class="board">
+      <div class="column" id="to-do">
+        <div class="dot1"></div>
+        <h2>To Do</h2>
       </div>
-
-      <div class="task-board">
-        <div class="task-column">
-          <ul id="todoList" class="task-list">
-            <h2>To Do</h2>
-          </ul>
-        </div>
-        <div class="task-column">
-          <ul id="inProgressList" class="task-list">
-            <h2>In Progress</h2>
-          </ul>
-        </div>
-        <div class="task-column">
-          <ul id="doneList" class="task-list">
-            <h2>Done</h2>
-          </ul>
-        </div>
-        <div class="task-column">
-          <ul id="blockedList" class="task-list">
-            <h2>Blocked</h2>
-          </ul>
-        </div>
+      <div class="column" id="in-progress">
+        <div class="dot2"></div>
+        <h2>In Progress</h2>
       </div>
+      <div class="column" id="done">
+        <div class="dot3"></div>
+        <h2>Done</h2>
+      </div>
+      <div class="column" id="blocked">
+        <div class="dot4"></div>
+        <h2>Blocked</h2>
+      </div>
+      <button id="add-task">Add task</button>
     </div>
-
-    <script src="todo.jss"></script>
+    <script src="todo.js"></script>
   </body>
 </html>
