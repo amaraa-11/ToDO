@@ -39,23 +39,3 @@ function createTaskElement(text, columnId) {
 
   document.getElementById(columnId).appendChild(task);
 }
-
-// function allowDrop(event) {
-//   event.preventDefault();
-// }
-
-// function drop(event) {
-//   event.preventDefault();
-//   const task = document.querySelector(".dragging");
-//   if (task) {
-//     event.target.appendChild(task);
-//   }
-// }
-
-// function dragStart(event) {
-//   event.target.classList.add("dragging");
-// }
-
-// function dragEnd(event) {
-//   event.target.classList.remove("dragging");
-// }

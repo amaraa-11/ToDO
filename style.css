@@ -14,7 +14,7 @@ body {
 
 .board {
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 .dot1 {
   width: 15px;
@@ -53,10 +53,11 @@ body {
   color: #ffffff;
   margin-bottom: 10px;
   font-size: 18px;
+  display: flex;
 }
 
 .task {
-  background-color: #444;
+  background-color: #1a1a1a;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -97,4 +98,31 @@ body {
 }
 #add-task:hover {
   border-radius: 25px;
+}
+#modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  display: none;
+}
+.modal-open {
+  display: block;
+}
+.modal-content {
+  background-color: #1e1e1e;
+  margin: 15% auto;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 12px;
+}
+.modal-content > input {
+  padding: 10px;
 }
