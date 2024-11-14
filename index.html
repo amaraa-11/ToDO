@@ -3,38 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do List</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="board">
-      <div class="column" id="to-do">
-        <div class="dot1"></div>
-        <h2>To Do</h2>
-      </div>
-      <div class="column" id="in-progress">
-        <div class="dot2"></div>
-        <h2>In Progress</h2>
-      </div>
-      <div class="column" id="done">
-        <div class="dot3"></div>
-        <h2>Done</h2>
-      </div>
-      <div class="column" id="blocked">
-        <div class="dot4"></div>
-        <h2>Blocked</h2>
-      </div>
-      <button id="add-task">Add task</button>
-    </div>
+    <main>
+      <section>
+        <div class="navbar">
+          <div>
+            <button class="addButton" onclick="addTask()">Add Task</button>
+          </div>
+        </div>
+        <div id="modal">
+          <div class="modal-content">
+            <h2>Enter Task</h2>
+            <input type="text" id="task-name" />
+            <label for="cars"></label>
+            <select id="task-status">
+              <option value="todo">To Do</option>
+              <option value="in-progress">In progress</option>
+              <option value="Done">Done</option>
+              <option value="Blocked">Blocked</option>
+            </select>
+            <button onclick="saveTask()">Submit</button>
+          </div>
+        </div>
 
-    <div id="modal">
-      <div class="modal-content">
-        <h2>enter task</h2>
-        <input type="text" id="taskName" />
-        <button onclick="saveTodo()">add</button>
-      </div>
-    </div>
-
-    <script src="todo.js"></script>
+        <div id="tasks" class="tasks"></div>
+        <div class="card-container">
+          <div class="card1">
+            <div class="dot1"></div>
+            <h2>To do</h2>
+            <div id="todo-tasks"></div>
+          </div>
+          <div class="card2">
+            <div class="dot2"></div>
+            <h2>In progress</h2>
+            <div id="in-progress-tasks"></div>
+          </div>
+          <div class="card3">
+            <div class="dot3"></div>
+            <h2>Done</h2>
+            <div id="done-tasks"></div>
+          </div>
+          <div class="card4">
+            <div class="dot4"></div>
+            <h2>Blocked</h2>
+            <div id="blocked-tasks"></div>
+          </div>
+        </div>
+        <script src="/todo.js"></script>
+      </section>
+    </main>
   </body>
 </html>
